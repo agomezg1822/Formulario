@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <main>
+        <form action="procesar.html" method="get">
+            <fieldset>
+                <legend>Controles del formulario</legend>
+                <label for="usuario">Usuario:</label>
+                <input type="text" name="usuario" id="usuario" pattern="[A-Za-z]{0-5}" 
+                title="Ingresar un nombre de maximo 10 letras" placeholder="Ingrese su usuario" >
+                <br><br>
+                <label for="correo">Correo:</label>
+                <input type="email" name="correo" id="correo" placeholder="Ingrese su email">
+                <br><br>
+                <label for="clave">Clave:</label>
+                <input type="password" name="clave" id="clave" placeholder="Ingrese la clave">
+                <br><br>
+                <label for="telefono">Telefono:</label>
+                <input type="tel" name="telefono" id="telefono" placeholder="Ingrese su numero de telefono">
+                
+                <br><br>
+                <label for="fecha">Fecha:</label>
+                <input type="date" name="date" id="date">
+                <br>
+                
+                <!--radio-->
+                <br><br>
+                <label for="edadM">Mayor de edad</label>
+                <input type="radio" name="edadM" id="edadM">
+                <label for="edadJ">Menor de edad</label>
+                <input type="radio" name="edadM" id="edadJ">
+                <br><br>
+                <!--Rango-->
+                <label for="rango">Rango</label>
+                <input type="range" id="ingreso" name="ingreso" min="0"max="10">
+                <br><br>
+                <label for="terminos">Terminos y condiciones</label>
+                <input type="checkbox" name="terminos" id="terminos">
+                <br><br>
+                <select name="pais" id="pais">
+                    <option value="co">colombia</option>
+                    <option value="br">brasil</option>
+                    <option value="ca">canada</option>
+                    <option value="NA" selected>Escoja un pais</select></option>
+            
+                </select>
+                <br><br>
+                <label for="datos">Observaciones:</label>
+                <textarea name="datos" id="datos" cols="30" rows="10">
+
+                </textarea>
+                <br>
+                <button type="submit">Enviar</button>
+                <button type="reset">Borrar</button>
+
+                <button type="button" onclick="mostrarMensaje()">Bóton</button>
+                
+            </fieldset>       
+        </form>
+    </main>
+    <script src="programa.js"></script>
+</body>
+</html>
